@@ -1,0 +1,63 @@
+<!--  DOM (Create & Remove elements) -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur Code</title>
+</head>
+
+<body style="background-color: black; color: aliceblue;">
+
+    <ul class="language">
+        <li>javaScrpt</li>
+    </ul>
+
+</body>
+<script>
+
+    // Add value
+
+    // 1. Basic way 
+    function addLanguage(langName) {
+        const li = document.createElement('li');
+        li.innerHTML = `${langName}`
+        document.querySelector('.language').appendChild(li)
+    }
+    addLanguage("python")
+    addLanguage('java')
+
+    // 2.
+    function addOptiLanguage(langName) {
+        const li = document.createElement('li').appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+    }
+    addLanguage("ruby")
+    addLanguage("goLang")
+
+    // always use this
+
+    // edit value
+
+
+    // 1.
+    const secondLang = document.querySelector('li:nth-child(2)')
+    // secondLang.innerHTML = "Mojo"
+    const newli = document.createElement('li')
+    newli.textContent = "Nordjs"
+    secondLang.replaceWith(newli)
+
+    // 2.
+    const firstLang = document.querySelector('li:first-child')
+    firstLang.outerHTML = '<li>TypeScript</li>'
+
+
+    // remove elements
+
+    const lastLang = document.querySelector('li:last-child')
+    lastLang.remove()
+</script>
+
+</html>

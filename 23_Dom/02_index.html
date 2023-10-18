@@ -1,0 +1,59 @@
+<!-- DOM (Loop, Style, First & Last Element child, Jump Parents) -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur Code</title>
+</head>
+
+<body style="background-color: black; color: aliceblue;">
+    <div class="parents">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+</body>
+
+<script>
+
+    const parents = document.querySelector('.parents')
+
+    console.log(parents);
+    console.log(parents.children);
+    console.log(parents.children[1]);
+    console.log(parents.children[1].innerHTML);
+
+    // loop
+
+    for (let i = 0; i < parents.children.length; i++) {
+        console.log(parents.children[i].innerHTML);
+    }
+
+    // style
+
+    parents.children[0].style.color = "orange"
+
+    // firstElement & lastElement child
+
+    console.log(parents.firstElementChild);
+    console.log(parents.firstElementChild.
+        innerHTML);
+
+    console.log(parents.lastElementChild);
+    console.log(parents.lastElementChild.innerHTML);
+
+    // jump parents
+
+    const dayOne = document.querySelector('.day')
+    console.log(dayOne.innerHTML);
+    console.log(dayOne.parentElement.innerText);
+    console.log(dayOne.nextElementSibling.innerText);
+
+    console.log("NODES:", parents.childNodes);
+</script>
+
+</html>

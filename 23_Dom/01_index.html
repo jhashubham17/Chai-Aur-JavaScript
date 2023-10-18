@@ -1,0 +1,150 @@
+<!-- DOM -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai Aur Code</title>
+</head>
+
+<body style="background-color: black;">
+    <div class="container" style="color: white;">
+        <h1 class="heading">Chai Aur Code</h1>
+        <p id="details" class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, explicabo iusto
+            deserunt ratione
+            voluptate repellat veniam magni, hic saepe eius autem distinctio nesciunt debitis animi esse quas pariatur
+            dolore quae.
+            <input type="password" name="" id="">
+        </p>
+        <ul>
+            <li class="list-iteam">Home</li>
+            <li class="list-iteam">Details</li>
+            <li class="list-iteam">More</li>
+            <li class="list-iteam">Blog</li>
+
+        </ul>
+    </div>
+</body>
+
+</html>
+<script>
+
+    // getElementById
+
+    document.getElementById('details')
+
+    document.getElementById('details').id
+
+    document.getElementById('details').innerText
+
+    document.getElementById('details').className
+
+    // getAttribute
+
+    document.getElementById('details').getAttribute('id')
+
+    document.getElementById('details').getAttribute('class')
+
+    // setAttribute
+
+    document.getElementById('details').setAttribute('class', 'moreDetails paragrapg')
+
+    const titles = document.getElementById('details')
+    console.log(titles.innerText)
+
+    // style
+
+    titles.style.color = "green"
+
+    titles.style.letterSpacing = "0.1rem"
+
+    // content Add
+
+    // textContent
+
+    titles.textContent
+    // show also nonvisible content
+
+    // innerText
+
+    titles.innerText
+    // visible content show
+
+    // innerHTML
+
+    titles.innerHTML
+    // support innerHTML
+
+    //  querySelector
+
+    document.querySelector('h1')
+
+    // id
+    document.querySelector('#details')
+
+    // class
+    document.querySelector('.heading')
+
+    // input
+    document.querySelector('input[type="password"]')
+
+    // ul
+    document.querySelector('ul')
+
+    const myul = document.querySelector('ul')
+
+    myul.querySelector('li')
+
+    const turnGreen = myul.querySelector('li')
+
+    turnGreen.style.backgroundColor = 'red'
+    turnGreen.style.padding = "10px"
+
+
+    // Dom manipulation - change value
+
+    turnGreen.innerText = "One"
+
+
+    // querySelectorAll
+
+    const tempLiList = document.querySelectorAll('li')
+    //   not pure array
+
+    tempLiList[1].style.color = "red"
+
+    // querySelectorAll - ForEach methods
+
+    tempLiList.forEach((l) => {
+        l.style.backgroundColor = "green"
+        l.style.padding = "12px"
+        l.style.fontSize = "18px"
+    })
+
+
+    // get.getElementByClassName
+
+    // document.getElementsByClassName('list-item')
+
+    // ClassName - forEach methods
+
+    const list = document.getElementsByClassName('list-iteam')
+
+    /*   list.forEach((li) => {
+          li.style.color = "black"
+    })
+      not change because have ho forEach methods
+    */
+
+    //    change list into Array
+
+    // Array.from(list)
+
+    const myConvertedArray = Array.from(list)
+
+    myConvertedArray.forEach((li) => {
+        li.style.backgroundColor = "orange"
+    })
+</script>
